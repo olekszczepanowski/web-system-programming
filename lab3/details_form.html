@@ -9,10 +9,56 @@
         width: 100%;
         justify-content: center;
       }
+      aside {
+        background-color: #f0f0f0;
+        padding: 10px;
+        margin-top: 20px;
+        width: 20%;
+      }
+      header {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
     </style>
     <title>Laboratorium 3</title>
   </head>
   <body>
-    To marcin zrob 😭😭😭
+    <header>
+      <h1>Witamy na stronie formularza z dodatkowymi danymi</h1>
+      <p>Proszę wypełnić poniższe informacje</p>
+    </header>
+
+    <h1>Dodatkowe informacje o użytkowniku</h1>
+    
+    <form>
+        <label for="favorite-color">Ulubiony kolor:</label>
+        <input type="color" id="favorite-color" name="favorite-color" placeholder="#000000"><br><br>
+        
+        <label for="birth-year-and-moth">Miesiąc i rok urodzenia:</label>
+        <input type="month" id="birth-year-and-month" name="birth-year-and-month" placeholder="Wybierz miesiąc i rok urodzenia"><br><br>
+        
+        <label for="satisfaction-level">Oceń swój humor:</label>
+        <input type="range" id="satisfaction-level" name="satisfaction-level" min="1" max="100" placeholder="50"><br><br>
+        
+        <label for="search">Wyszukaj coś:</label>
+        <input type="search" id="search" name="search" placeholder="Wpisz zapytanie"><br><br>
+        
+        <label for="website">Podaj link do swojego ulubionego filmu na youtube:</label>
+        <input type="url" id="website" name="website" placeholder="https://example.com"><br><br>
+        
+        <input type="submit" value="Wyślij">
+    </form>
+
+    <aside>
+      <h2>Informacje poboczne</h2>
+      <p>Pamiętaj, aby podać prawdziwe informacje. Wypełnienie formularza jest wymagane do zakończenia tego kroku.</p>
+      <p>Możesz w każdej chwili zaktualizować swoje dane.</p>
+    </aside>
+
+    <footer>
+      <p>© 2024 Laboratorium 3.</p>
+    </footer>
   </body>
 </html>
