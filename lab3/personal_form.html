@@ -64,7 +64,13 @@
       </div>
       <div class="form-element">
         <label for="tel">Nr telefonu:</label>
-        <input type="tel" name="tel" />
+        <input
+          type="tel"
+          name="tel"
+          id="tel"
+          pattern="^\+?\d{2}-\d{3}-\d{3}-\d{3}$"
+          title="Wprowadź numer w formacie np. +48-333-444-444"
+        />
         <span>Np. +48-333-444-444</span>
       </div>
       <button type="submit">Wyslij</button>
