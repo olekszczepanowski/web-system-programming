@@ -1,0 +1,36 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+th,
+td {
+  border: 1px solid #333;
+  padding: 10px;
+  text-align: center;
+}
+th {
+  background-color: #4caf50;
+  color: white;
+}
+.highlight {
+  background-color: #fc443a;
+}
+.nested-table {
+  width: 80%;
+  margin: auto;
+}
+mark {
+  background-color: #4caf50;
+}
+footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+#slask-logo {
+  height: 100pt;
+}
+body {
+  background-color: #a9d3ab;
+}

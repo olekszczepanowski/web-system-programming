@@ -7,7 +7,7 @@
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
   transition: 0.3s;
 }
 a:hover {
@@ -18,7 +18,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(201, 204, 201);
+  background-color: rgb(0, 0, 0);
   width: 100%;
   padding: 1rem;
 }
@@ -49,4 +49,12 @@ li {
 #map-download {
   width: 80px;
   display: flex;
+}
+
+body {
+  background-image: url("https://ocdn.eu/pulscms-transforms/1/G0ek9kpTURBXy9hZmZmNGU1ODBjZmI5NGI4YTRmZWZlNjIxMTNjMzgzYy5qcGeTlQPNAe4AzRvHzQ-glQLNBLAAw8OTCaY2Y2Q1MDcG3gABoTAB/wroclaw.jpeg");
+}
+
+#city-description {
+  color: white;
 }
