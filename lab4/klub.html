@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="html, lab2, websystemprogramming, Wrocław, Stolica Dolnego Śląska, restauracje we wrocławiu"
+    />
+    <meta name="description" content="The file contains lab 2 exercise." />
+    <title>Laboratorium 2</title>
+    <style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+      }
+      th,
+      td {
+        border: 1px solid #333;
+        padding: 10px;
+        text-align: center;
+      }
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+      .highlight {
+        background-color: #fc443a;
+      }
+      .nested-table {
+        width: 80%;
+        margin: auto;
+      }
+      mark {
+        background-color: #4caf50;
+      }
+      footer {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><mark>Śląsk Wrocław</mark> &copy;</h1>
+    <section>
+      <p>
+        <b>Śląsk Wrocław</b> to profesjonalny klub piłkarski z siedzibą we
+        Wrocławiu, założony w 1946 roku. Klub ma bogatą historię i jest jednym z
+        najbardziej utytułowanych zespołów w Polsce. Jego barwy to zieleń i
+        biały.
+      </p>
+      <img
+        src="https://wks-slask.wroc.pl/wp-content/uploads/2020/03/herb.png"
+        alt="Zdjęcie herbu Śląska Wrocław"
+        height="200"
+      />
+      <details>
+        <summary>Historia klubu</summary>
+        <p>
+          W 1946 roku z Przemyśla do Wrocławia zostaje przeniesiona Oficerska
+          Szkoła Saperów. Przy niej, 18 marca 1946 roku[1] na zebraniu
+          założycielskim zostaje powołany do życia Klub Sportowy Pionier
+          (pochodzenie nazwy: Pionierzy Wrocławia, Pionier (wojsko)). Zostają
+          założone sekcje piłki nożnej, hokeja, boksu i wioślarstwa. Pionier
+          Wrocław występy rozpoczął od B-klasy dolnośląskiej. Sezon 1946/47
+          zakończył na pierwszym miejscu i awansował do A-klasy. W 1947 roku z
+          Krakowa do Wrocławia przeniosła się Oficerska Szkoła Piechoty Nr 1.
+          (szkoła ta powstała w czerwcu 1943 roku w Riazaniu w ZSRR jako
+          Dywizyjna Szkoła Podchorążych, a w roku 1945 została przeniesiona do
+          Krakowa). Przy szkole powstał Klub Sportowy Podchorążak. Data
+          powstania klubu nie jest znana, na pewno funkcjonował on już w
+          Krakowie. W roku 1947 Pionier i Podchorążak połączyły się (dokładna
+          data tego połączenia nie jest znana). Dlatego też rok 1947 został
+          oficjalnie uznany za datę powstania obecnego WKS Śląsk Wrocław, jednak
+          biorąc pod uwagę, iż po połączeniu klub występował w A-klasie
+          dolnośląskiej, do której wywalczył awans sezon wcześniej jako Pionier
+          Wrocław, to za datę powstania klubu należałoby uznać 18 marca 1946
+          roku[2].
+        </p>
+      </details>
+    </section>
+    <h1>Wyniki Śląska Wrocław w Ostatnich Sezonach</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Sezon</th>
+          <th>Pozycja w lidze</th>
+          <th>Punkty</th>
+          <th>Statystyki</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2021/2022</td>
+          <td class="highlight">15</td>
+          <td>35</td>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <th>Wygrane</th>
+                <th>Remisy</th>
+                <th>Przegrane</th>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>14</td>
+                <td>13</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>2022/2023</td>
+          <td class="highlight">15</td>
+          <td>38</td>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <th>Wygrane</th>
+                <th>Remisy</th>
+                <th>Przegrane</th>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>11</td>
+                <td>14</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>2023/2024</td>
+          <td class="highlight">2</td>
+          <td>63</td>
+          <td>
+            <table class="nested-table">
+              <tr>
+                <th>Wygrane</th>
+                <th>Remisy</th>
+                <th>Przegrane</th>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>9</td>
+                <td>7</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>Suma</td>
+          <td>
+            <table>
+              <tr>
+                <td>34</td>
+                <td>34</td>
+                <td>3</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <label for="season_completion">Etap sezonu 2024/2025: </label>
+    <meter id="season_completion" value="0.34"></meter>
+    <footer>Created by Marcin Wawer and Aleksander Szczepanowski</footer>
+  </body>
+</html>

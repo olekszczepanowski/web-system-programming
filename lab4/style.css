@@ -1,0 +1,52 @@
+* {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+a:hover {
+  color: red;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(201, 204, 201);
+  width: 100%;
+  padding: 1rem;
+}
+.nav-div {
+  display: flex;
+  width: 50%;
+  gap: 10%;
+}
+section {
+  display: flex;
+  justify-content: center;
+  padding: 1%;
+  gap: 10px;
+}
+.wroclaw-jpg {
+  width: 400pt;
+}
+#city-monuments {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+li {
+  font-size: 18px;
+  padding: 2px;
+}
+
+#map-download {
+  width: 80px;
+  display: flex;
+}
