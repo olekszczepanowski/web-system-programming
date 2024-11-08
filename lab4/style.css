@@ -14,6 +14,14 @@ a:hover {
   color: red;
 }
 
+a:active {
+  background-color: rgb(96, 95, 94);
+}
+
+/* a:visited {
+  color: blue;
+} */
+
 nav {
   display: flex;
   align-items: center;
@@ -35,6 +43,7 @@ section {
 }
 .wroclaw-jpg {
   width: 400pt;
+  float: right;
 }
 #city-monuments {
   padding: 10px;
@@ -46,6 +55,11 @@ li {
   padding: 2px;
 }
 
+li:first-of-type {
+  color: rgba(249, 0, 0, 0.822);
+  font-size: 20px;
+}
+
 #map-download {
   width: 80px;
   display: flex;
@@ -53,6 +67,14 @@ li {
 
 body {
   background-image: url("https://ocdn.eu/pulscms-transforms/1/G0ek9kpTURBXy9hZmZmNGU1ODBjZmI5NGI4YTRmZWZlNjIxMTNjMzgzYy5qcGeTlQPNAe4AzRvHzQ-glQLNBLAAw8OTCaY2Y2Q1MDcG3gABoTAB/wroclaw.jpeg");
+  background-size: cover;
+}
+
+@media (max-width: 1530px) {
+  body {
+    background-size: 200px;
+    background-repeat: repeat;
+  }
 }
 
 #city-description {

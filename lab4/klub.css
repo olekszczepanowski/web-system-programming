@@ -1,7 +1,12 @@
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  border: 2px solid black;
 }
 th,
 td {
@@ -33,4 +38,25 @@ footer {
 }
 body {
   background-color: #a9d3ab;
+}
+#club-summary {
+  font-weight: bold;
+}
+summary {
+  font-style: italic;
+  font-variant: small-caps;
+  font-size: large;
+}
+p:first-child {
+  background-color: yellow;
+}
+details:nth-child(3) {
+  color: rgb(4, 51, 4);
+}
+table:last-child {
+  color: rgb(69, 0, 231);
+}
+:target {
+  border: 2px solid darkorange;
+  background-color: beige;
 }

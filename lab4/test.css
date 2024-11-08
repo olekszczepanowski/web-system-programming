@@ -1,0 +1,93 @@
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 20px;
+}
+
+h1,
+h3 {
+  text-align: center;
+}
+
+img {
+  float: left;
+  margin: 10px;
+  width: 200px;
+  height: auto;
+}
+
+.clear {
+  clear: both;
+}
+
+input[type="submit"]:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+input:checked {
+  outline: 1px solid red;
+}
+
+input:disabled {
+  background-color: #e0e0e0;
+  color: #999;
+}
+
+input:empty {
+  border: 1px solid red;
+}
+
+input:enabled {
+  background-color: rgba(172, 222, 238, 0.927);
+}
+
+form :first-child {
+  font-weight: bold;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #4a90e2;
+  background-color: #f0f8ff;
+}
+
+form :last-child {
+  font-size: x-large;
+}
+
+input:last-of-type {
+  background-color: #c96a6a;
+}
+
+input:not([type="submit"]):not([type="reset"]) {
+  border: 1px solid #ccccccb8;
+  padding: 6px;
+}
+
+input[type="radio"]:nth-last-child(3) {
+  border-right: 3px solid #000;
+}
+
+input:required {
+  color: #4a90e2;
+}
+
+input[type="reset"] {
+  background-color: #f0f0f0;
+  color: #000;
+  font-size: 1.5em;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+#box {
+  background-color: lightgreen;
+  height: 90px;
+  width: 90px;
+  float: right;
+}
+#box:empty {
+  background-color: rgb(151, 30, 16);
+}

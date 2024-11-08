@@ -1,103 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="keywords"
-          content="html, lab2, websystemprogramming, Wrocław, Stolica Dolnego Śląska, test"
-        />
-        <meta name="description" content="The file contains lab 2 exercise." />
-        <title>Laboratorium 2</title>
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="html, lab2, websystemprogramming, Wrocław, Stolica Dolnego Śląska, test"
+    />
+    <meta name="description" content="The file contains lab 2 exercise." />
+    <link rel="stylesheet" href="test.css" />
+    <title>Test</title>
+  </head>
 
-    <body>
-        <h1>Test na to czy mieszkasz we Wrocławiu</h1>
-        <h3>Wypełnij go aby dowiedzieć się czy faktycznie mieszkasz we Wrocławiu</h3>
+  <body>
+    <h1>Test na to czy mieszkasz we Wrocławiu</h1>
+    <h3>
+      Wypełnij go aby dowiedzieć się czy faktycznie mieszkasz we Wrocławiu
+    </h3>
 
-        <form action="submit_form.html" method="get">
+    <form action="submit_form.html" method="get">
+      <label for="name">Imię:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
 
-            <label for="name">Imię:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
+      <label for="surname">Nazwisko:</label><br />
+      <input type="text" id="surname" name="surname" /><br /><br />
 
-            <label for="surname">Nazwisko:</label><br>
-            <input type="text" id="surname" name="surname" required><br><br>
+      <label for="email">E-mail:</label><br />
+      <input type="text" id="email" name="email" /><br /><br />
 
-            <label for="email">E-mail:</label><br>
-            <input type="text" id="email" name="email" required><br><br>
+      <label for="email">Stanowisko:</label><br />
+      <input type="text" id="email" name="email" disabled /><br /><br />
 
+      <label>Wybierz płeć:</label><br />
+      <input type="radio" id="female" name="gender" value="female" required />
+      <label for="female">Kobieta</label><br />
 
-            <label>Wybierz płeć:</label><br>
-            <input type="radio" id="female" name="gender" value="female" required>
-            <label for="female">Kobieta</label><br>
+      <div id="box"></div>
 
-            <input type="radio" id="male" name="gender" value="male" required>
-            <label for="male">Mężczyzna</label><br>
+      <input type="radio" id="male" name="gender" value="male" required />
+      <label for="male">Mężczyzna</label><br />
 
-            <input type="radio" id="other" name="gender" value="other" required>
-            <label for="other">Inna</label><br><br>
+      <input type="radio" id="other" name="gender" value="other" required />
+      <label for="other">Inna</label><br /><br />
 
+      <label for="city">Jak nazywasz Wrocław na codzień:</label><br />
+      <select id="city" name="city" required>
+        <option value="" disabled selected>Wybierz opcję</option>
+        <option value="wroclaw">Wrocław</option>
+        <option value="wro">Wro</option>
+        <option value="breslau">Breslau</option>
+        <option value="other">Inaczej</option></select
+      ><br /><br />
 
-            <label for="city">Jak nazywasz Wrocław na codzień:</label><br>
-            <select id="city" name="city" required>
-                <option value="" disabled selected>Wybierz opcję</option>
-                <option value="wroclaw">Wrocław</option>
-                <option value="wro">Wro</option>
-                <option value="breslau">Breslau</option>
-                <option value="other">Inaczej</option>
-            </select><br><br>
+      <label>Które z tych rzek płyną przez Wrocław? </label><br />
 
+      <input type="checkbox" id="olawa" name="rivers" value="olawa" />
+      <label for="olawa">Oława</label><br />
 
-            <label>Które z tych rzek płyną przez Wrocław?   </label><br>
+      <input type="checkbox" id="bystrzyca" name="rivers" value="bystrzyca" />
+      <label for="bystrzyca">Bystrzyca</label><br />
 
-            <input type="checkbox" id="olawa" name="rivers" value="olawa">
-            <label for="olawa">Oława</label><br>
+      <input type="checkbox" id="widawa" name="rivers" value="widawa" />
+      <label for="widawa">Widawa</label><br />
 
-            <input type="checkbox" id="bystrzyca" name="rivers" value="bystrzyca">
-            <label for="bystrzyca">Bystrzyca</label><br>
+      <input type="checkbox" id="wisla" name="rivers" value="wisla" />
+      <label for="wisla">Wisła</label><br />
 
-            <input type="checkbox" id="widawa" name="rivers" value="widawa">
-            <label for="widawa">Widawa</label><br>
+      <input type="checkbox" id="warta" name="rivers" value="warta" />
+      <label for="warta">Warta</label><br />
 
-            <input type="checkbox" id="wisla" name="rivers" value="wisla">
-            <label for="wisla">Wisła</label><br>
+      <input type="checkbox" id="bug" name="rivers" value="bug" />
+      <label for="bug">Bug</label><br />
 
-            <input type="checkbox" id="warta" name="rivers" value="warta">
-            <label for="warta">Warta</label><br>
+      <input type="checkbox" id="sleza" name="rivers" value="sleza" />
+      <label for="sleza">Ślęza</label><br />
 
-            <input type="checkbox" id="bug" name="rivers" value="bug">
-            <label for="bug">Bug</label><br>
+      <input type="checkbox" id="pilica" name="rivers" value="pilica" />
+      <label for="pilica">Pilica</label><br />
 
-            <input type="checkbox" id="sleza" name="rivers" value="sleza">
-            <label for="sleza">Ślęza</label><br>
+      <input type="checkbox" id="narew" name="rivers" value="narew" />
+      <label for="narew">Narew</label><br />
 
-            <input type="checkbox" id="pilica" name="rivers" value="pilica">
-            <label for="pilica">Pilica</label><br>
+      <input type="checkbox" id="odra" name="rivers" value="odra" />
+      <label for="odra">Odra</label><br /><br />
 
-            <input type="checkbox" id="narew" name="rivers" value="narew">
-            <label for="narew">Narew</label><br>
+      <label>Ile szczurów widziałeś w ciągu ostanich 7 dni?</label><br />
+      <input type="radio" id="min-0-rats" name="rat" value="0 rats" required />
+      <label for="min-0-rats">0 szczurów</label><br />
 
-            <input type="checkbox" id="odra" name="rivers" value="odra">
-            <label for="odra">Odra</label><br><br>
+      <input
+        type="radio"
+        id="mid-1-3-rats"
+        name="rat"
+        value="1-3 rats"
+        required
+      />
+      <label for="mid-1-3-rats">1-3 szczury</label><br />
 
-            <label>Ile szczurów widziałeś w ciągu ostanich 7 dni?</label><br>
-            <input type="radio" id="min-0-rats" name="rat" value="0 rats" required>
-            <label for="min-0-rats">0 szczurów</label><br>
+      <input
+        type="radio"
+        id="max-4-more-rats"
+        name="rat"
+        value="4 or more"
+        required
+      />
+      <label for="max-4-more-rats">4 lub więcej szczurów</label><br /><br />
 
-            <input type="radio" id="mid-1-3-rats" name="rat" value="1-3 rats" required>
-            <label for="mid-1-3-rats">1-3 szczury</label><br>
+      <label for="comments" id="comments">Uwagi:</label><br />
+      <textarea
+        id="comments"
+        name="comments"
+        rows="4"
+        cols="50"
+        maxlength="200"
+        placeholder="Wpisz maksymalnie 200 znaków..."
+      ></textarea
+      ><br /><br />
 
-            <input type="radio" id="max-4-more-rats" name="rat" value="4 or more" required>
-            <label for="max-4-more-rats">4 lub więcej szczurów</label><br><br>
-
-
-            <label for="comments">Uwagi:</label><br>
-            <textarea id="comments" name="comments" rows="4" cols="50" maxlength="200" placeholder="Wpisz maksymalnie 200 znaków..."></textarea><br><br>
-
-
-            <input type="reset" value="Wyczyść formularz">
-            <input type="submit" value="Wyślij formularz">
-        </form>
-    </body>
+      <input type="reset" value="Wyczyść formularz" />
+      <input type="submit" value="Wyślij formularz" />
+    </form>
+  </body>
 </html>

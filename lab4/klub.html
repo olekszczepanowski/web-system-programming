@@ -14,6 +14,7 @@
   </head>
   <body>
     <h1><mark>Śląsk Wrocław</mark> &copy;</h1>
+    <p><a href="#season_completion">Przejdz do etapu sezonu</a></p>
     <section>
       <p>
         <b>Śląsk Wrocław</b> to profesjonalny klub piłkarski z siedzibą we
@@ -28,7 +29,7 @@
       />
       <details>
         <summary>Historia klubu</summary>
-        <p>
+        <p id="club-summary">
           W 1946 roku z Przemyśla do Wrocławia zostaje przeniesiona Oficerska
           Szkoła Saperów. Przy niej, 18 marca 1946 roku[1] na zebraniu
           założycielskim zostaje powołany do życia Klub Sportowy Pionier
@@ -127,15 +128,17 @@
               <tr>
                 <td>34</td>
                 <td>34</td>
-                <td>3</td>
+                <td>34</td>
               </tr>
             </table>
           </td>
         </tr>
       </tbody>
     </table>
-    <label for="season_completion">Etap sezonu 2024/2025: </label>
-    <meter id="season_completion" value="0.34"></meter>
+    <div id="season_completion">
+      <label for="season_completion">Etap sezonu 2024/2025: </label>
+      <meter value="0.34"></meter>
+    </div>
     <footer>Created by Marcin Wawer and Aleksander Szczepanowski</footer>
   </body>
 </html>
