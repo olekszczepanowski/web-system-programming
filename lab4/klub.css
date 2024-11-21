@@ -38,7 +38,7 @@ footer {
   height: 100pt;
 }
 body {
-  background-color: #a9d3ab;
+  transition: background-color 0.5s ease;
 }
 #club-summary {
   font-weight: bold;

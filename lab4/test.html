@@ -19,7 +19,7 @@
       Wypełnij go aby dowiedzieć się czy faktycznie mieszkasz we Wrocławiu
     </h3>
 
-    <form action="submit_form.html" method="get">
+    <form id="wroclaw-form">
       <label for="name">Imię:</label><br />
       <input type="text" id="name" name="name" required /><br /><br />
 
@@ -54,7 +54,6 @@
       ><br /><br />
 
       <label>Które z tych rzek płyną przez Wrocław? </label><br />
-
       <input type="checkbox" id="olawa" name="rivers" value="olawa" />
       <label for="olawa">Oława</label><br />
 
@@ -118,8 +117,17 @@
       ></textarea
       ><br /><br />
 
-      <input type="reset" value="Wyczyść formularz" />
-      <input type="submit" value="Wyślij formularz" />
+      <input
+        type="reset"
+        value="Wyczyść formularz"
+        onclick="confirmReset(event)"
+      />
+      <input
+        type="submit"
+        value="Wyślij formularz"
+        onclick="submitForm(event)"
+      />
     </form>
+    <script src="script/form_script.js"></script>
   </body>
 </html>
