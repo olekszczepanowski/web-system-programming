@@ -15,6 +15,11 @@
   <body>
     <h1><mark>Śląsk Wrocław</mark> &copy;</h1>
     <p><a href="#season_completion">Przejdz do etapu sezonu</a></p>
+    <select id="font-family" onchange="changeFont()">
+      <option value="Arial">Arial</option>
+      <option value="Courier New">Courier New</option>
+      <option value="Georgia">Georgia</option>
+    </select>
     <section>
       <p>
         <b>Śląsk Wrocław</b> to profesjonalny klub piłkarski z siedzibą we
@@ -26,7 +31,12 @@
         id="slask-logo"
         src="https://wks-slask.wroc.pl/wp-content/uploads/2020/03/herb.png"
         alt="Zdjęcie herbu Śląska Wrocław"
+        onmousemove="logEvent(event)"
+        onmousedown="logEvent(event)"
+        onmouseover="logEvent(event)"
+        onmouseout="logEvent(event)"
       />
+
       <details>
         <summary>Historia klubu</summary>
         <p id="club-summary">

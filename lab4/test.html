@@ -19,9 +19,20 @@
       Wypełnij go aby dowiedzieć się czy faktycznie mieszkasz we Wrocławiu
     </h3>
 
-    <form id="wroclaw-form">
+    <form
+      id="wroclaw-form"
+      onsubmit="submitForm(event)"
+      onreset="confirmReset(event)"
+    >
       <label for="name">Imię:</label><br />
-      <input type="text" id="name" name="name" required /><br /><br />
+      <input
+        type="text"
+        id="name"
+        name="name"
+        onfocus="showHelp('Wpisz swoje imię')"
+        onblur="hideHelp()"
+      /><br />
+      <p id="help-text" style="color: gray; font-style: italic"></p>
 
       <label for="surname">Nazwisko:</label><br />
       <input type="text" id="surname" name="surname" /><br /><br />
@@ -117,16 +128,8 @@
       ></textarea
       ><br /><br />
 
-      <input
-        type="reset"
-        value="Wyczyść formularz"
-        onclick="confirmReset(event)"
-      />
-      <input
-        type="submit"
-        value="Wyślij formularz"
-        onclick="submitForm(event)"
-      />
+      <input type="reset" value="Wyczyść formularz" />
+      <input type="submit" value="Wyślij formularz" />
     </form>
     <script src="script/form_script.js"></script>
   </body>

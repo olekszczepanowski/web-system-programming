@@ -5,8 +5,26 @@ function submitForm(event) {
 
 function confirmReset(event) {
   event.preventDefault();
-  let confirmation = prompt("Potwierdzam, aby zresetować formularz");
+  const confirmation = prompt("Potwierdzam, aby zresetować formularz");
   if (confirmation === "Potwierdzam") {
     document.getElementById("wroclaw-form").reset();
   }
+}
+
+function showHelp(text) {
+  const helpText = document.getElementById("help-text");
+  if (helpText) {
+    helpText.textContent = text;
+  }
+}
+
+function hideHelp() {
+  const helpText = document.getElementById("help-text");
+  if (helpText) {
+    helpText.textContent = "";
+  }
+}
+
+function confirmSubmit() {
+  return confirm("Czy na pewno chcesz wysłać formularz?");
 }

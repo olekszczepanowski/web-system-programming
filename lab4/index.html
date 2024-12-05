@@ -56,13 +56,35 @@
         </p>
         <div id="city-monuments">
           <h2>Najslynniejsze miejsca we Wrocławiu:</h2>
-          <ul>
-            <li>Rynek - <a href="https://g.co/kgs/1RHienC">Klik</a></li>
-            <li>Ostrów Tumski - <a href="https://g.co/kgs/T1PxBGa">Klik</a></li>
-            <li>Hala Stulecia - <a href="https://g.co/kgs/AqUCM2s">Klik</a></li>
+          <ul id="task1-list">
+            <li id="rynek">
+              Rynek - <a href="https://g.co/kgs/1RHienC">Klik</a>
+            </li>
+            <li id="empty">Pusty - <a href="#">Klik</a></li>
+            <li id="ostrow">
+              Ostrów Tumski - <a href="https://g.co/kgs/T1PxBGa">Klik</a>
+            </li>
+            <li id="hala">
+              Hala Stulecia - <a href="https://g.co/kgs/AqUCM2s">Klik</a>
+            </li>
           </ul>
           <button id="map-download">
             <a href="wroclaw.zip" style="color: black">Pobierz mapę</a>
+          </button>
+          <button class="add-elem" onclick="addElementToList()">
+            Dodaj element
+          </button>
+          <button class="add-elem" onclick="addElementBeforeRynek()">
+            Dodaj element przed rynkiem
+          </button>
+          <button class="add-elem" onclick="replaceOstrow()">
+            Zamień Ostrów Tumski
+          </button>
+          <button class="add-elem" onclick="deleteHala()">
+            Usuń Halę Stulecia
+          </button>
+          <button class="add-elem" onclick="showCollections()">
+            Pokaż kolekcje na tej stronie.
           </button>
         </div>
       </div>

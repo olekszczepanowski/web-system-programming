@@ -64,6 +64,10 @@ li:first-of-type {
   width: 80px;
   display: flex;
 }
+.add-elem {
+  width: 80px;
+  display: flex;
+}
 
 body {
   background-image: url("https://ocdn.eu/pulscms-transforms/1/G0ek9kpTURBXy9hZmZmNGU1ODBjZmI5NGI4YTRmZWZlNjIxMTNjMzgzYy5qcGeTlQPNAe4AzRvHzQ-glQLNBLAAw8OTCaY2Y2Q1MDcG3gABoTAB/wroclaw.jpeg");

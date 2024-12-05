@@ -1,3 +1,10 @@
+const getRandomInteger = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+
+  return Math.floor(Math.random() * (max - min)) + min;
+};
+
 const randomNumber = getRandomInteger(1, 100);
 let attempts = 3;
 
@@ -8,7 +15,7 @@ function guessNumber() {
     const userGuess = parseInt(prompt(`Próba ${i}: Podaj liczbę:`));
 
     if (userGuess === randomNumber) {
-      console.log("Brawo! Zgadłeś wylosowany miesiąc!");
+      console.log("Brawo! Zgadłeś wylosowaną liczbę!");
       return;
     } else if (userGuess > randomNumber) {
       console.log("Twój strzał jest wiekszy niż wylosowana liczba!");
