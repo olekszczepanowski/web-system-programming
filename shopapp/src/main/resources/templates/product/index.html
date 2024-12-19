@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      lang="en"
+      layout:decorate="_shared/_layout">
+
+
+<title layout:fragment="title">Product list</title>
+
+
+<body>
+<div layout:fragment="content">
+    <a href="/logout">Wyloguj</a>
+    <table class="display table table-bordered" style="width:800px">
+        <thead class ="text-center">
+        <tr>
+            <th class="text-left">Id</th>
+            <th class="text-left">Name</th>
+            <th class="text-left">Weight [g]</th>
+            <th class="text-left" >Price [zł]</th>
+            <th class="text-left">Category</th>
+            <th class="text-center" colspan="3">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td class="text-left" th:text="${product.getName()}"></td>
+            <td class="text-left" th:text="${product.getWeight()}"></td>
+            <td class="text-left" th:text="${product.getPrice()}"></td>
+            <td class="text-left" th:text="${product.getCategory().name}"></td>
+            <td><a class="btn btn-primary" th:href="@{/product/details(id=${product.id})}">details</a></td>
+            <td><a class="btn btn-primary" th:href="@{/product/{prodId}/edit(prodId=${product.id})}">edit</a></td>
+
+            <td><a class="btn btn-danger" th:href="@{/product/remove(id=${product.id})}">remove</a></td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="display table table-bordered" style="width:800px">
+        <thead class ="text-center">
+        <tr>
+            <th class="text-left">Id</th>
+            <th class="text-left">Name</th>
+            <th class="text-left">Code</th>
+            <th class="text-center" colspan="3">Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="category : ${categories}">
+            <td class="text-right" th:text= "${category.getId()}"></td>
+            <td class="text-left" th:text="${category.getName()}"></td>
+            <td class="text-left" th:text="${category.getCode()}"></td>
+            <td><a class="btn btn-primary" th:href="@{/category/details(id=${category.id})}">details</a></td>
+            <td><a class="btn btn-primary" th:href="@{/category/{catId}/edit(catId=${category.id})}">edit</a></td>
+
+            <td><a class="btn btn-danger" th:href="@{/category/remove(id=${category.id})}">remove</a></td>
+
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

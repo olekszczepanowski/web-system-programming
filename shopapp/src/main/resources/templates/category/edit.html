@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="_shared/_layout">
+<title layout:fragment="title">Edit category</title>
+<body>
+<div layout:fragment="content">
+    <h1>Edit category</h1>
+<form action="#" th:action="@{/category/edit}" th:object="${category}" method="post">
+    <input type="hidden" th:field="*{id}"/>
+    <p>Name: <input type="text" th:field="*{name}"/></p>
+    <p>Code: <input type="text" th:field="*{code}"/></p>
+    <p><input type="submit" value="Modify" /> <input type="reset" value="Reset" /></p>
+</form>
+</div>
+</body>
+</html>

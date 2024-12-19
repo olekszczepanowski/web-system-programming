@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Index file</title>
+</head>
+<body>
+<div class="w-full flex justify-end p-2 bg-blue-100">
+    <div class="flex justify-end gap-2 " sec:authorize="!isAuthenticated()">
+    <a href="/login"><div class="p-2 bg-blue-600 rounded w-[100px] flex text-white justify-center">Login</div></a>
+    <a href="/register"><div class="p-2 bg-blue-600 rounded w-[100px] text-white flex justify-center">Register</div></a>
+    </div>
+    <form sec:authorize="isAuthenticated()" method="post" action="/logout">
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}"/>
+        <button type="submit" class="p-2 bg-red-500 rounded w-[100px] flex justify-center">Logout</button>
+    </form>
+
+</div>
+<div class="w-full flex justify-center flex-col items-center">
+    <h1 class="font-bold underline text-2xl">Page for all users</h1>
+    <p>You must log in or register to access our shop!</p>
+</div>
+</body>
+</html>

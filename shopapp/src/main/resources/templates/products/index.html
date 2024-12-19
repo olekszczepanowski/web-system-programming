@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Product list</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container mt-4">
+    <a href="/logout" class="btn btn-danger mb-3">Logout</a>
+    <a href="/cart" class="btn btn-success mb-3">Cart</a>
+    <h2>Products</h2>
+    <table class="table table-bordered" style="width:800px">
+        <thead class="text-center">
+        <tr>
+            <th class="text-left">Name</th>
+            <th class="text-left">Weight [g]</th>
+            <th class="text-left">Price [zł]</th>
+            <th class="text-left">Category</th>
+            <th class="text-center">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="product : ${products}">
+            <td class="text-left" th:text="${product.getName()}"></td>
+            <td class="text-left" th:text="${product.getWeight()}"></td>
+            <td class="text-left" th:text="${product.getPrice()}"></td>
+            <td class="text-left" th:text="${product.getCategory().name}"></td>
+            <td class="text-center">
+                <form th:action="@{/products/addToCart}" method="post" style="display:inline;">
+                    <input type="hidden" name="productId" th:value="${product.id}" />
+                    <button type="submit" class="btn btn-success">Add</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

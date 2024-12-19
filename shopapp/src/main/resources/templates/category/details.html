@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="_shared/_layout">
+<title layout:fragment="title">Category details</title>
+<body>
+<div layout:fragment="content">
+    <h1>Category details</h1>
+    <table class="display table table-bordered" style="width:800px" th:object="${category}">
+        <thead>
+        <tr>
+            <th>Property</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>id</td>
+            <td th:text="*{id}"></td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td th:text="*{name}"></td>
+        </tr>
+        <tr>
+            <td>code</td>
+            <td th:text="*{code}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

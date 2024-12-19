@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen font-sans leading-normal tracking-normal">
+<div class="container mx-auto px-6 py-8">
+    <h1 class="text-3xl font-bold text-gray-800 mb-6">Your Cart</h1>
+
+    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+        <table class="min-w-full table-auto divide-y divide-gray-200">
+            <thead class="bg-gray-100">
+            <tr>
+                <th class="px-4 py-2 text-left text-sm font-medium text-gray-600 uppercase">Name</th>
+                <th class="px-4 py-2 text-left text-sm font-medium text-gray-600 uppercase">Price</th>
+                <th class="px-4 py-2 text-left text-sm font-medium text-gray-600 uppercase">Quantity</th>
+                <th class="px-4 py-2 text-left text-sm font-medium text-gray-600 uppercase">Total</th>
+                <th class="px-4 py-2 text-left text-sm font-medium text-gray-600 uppercase">Actions</th>
+            </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200">
+            <tr th:each="entry : ${productsInCart}">
+                <td class="px-4 py-2 text-sm text-gray-700" th:text="${entry['product'].getName()}"></td>
+                <td class="px-4 py-2 text-sm text-gray-700" th:text="${entry['product'].getPrice()}"></td>
+                <td class="px-4 py-2">
+                    <form th:action="@{/cart/update}" method="post" class="inline-flex space-x-2 items-center">
+                        <input type="hidden" name="productId" th:value="${entry['product'].getId()}" />
+                        <select name="quantity" class="border-gray-300 rounded px-2 py-1 focus:ring-2 focus:ring-blue-300 focus:outline-none">
+                            <option th:each="i : ${#numbers.sequence(0, 10)}"
+                                    th:value="${i}"
+                                    th:text="${i}"
+                                    th:selected="${i == entry['quantity']}">
+                            </option>
+                        </select>
+                        <button type="submit" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 focus:outline-none">Update</button>
+                    </form>
+                </td>
+                <td class="px-4 py-2 text-sm text-gray-700" th:text="${entry['product'].getPrice() * entry['quantity']}"></td>
+                <td class="px-4 py-2">
+                    <form th:action="@{/cart/update}" method="post" class="inline-flex space-x-2 items-center">
+                        <input type="hidden" name="productId" th:value="${entry['product'].getId()}" />
+                        <input type="hidden" name="quantity" value="0" />
+                        <button type="submit" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 focus:ring-2 focus:ring-red-400 focus:outline-none">Remove</button>
+                    </form>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
