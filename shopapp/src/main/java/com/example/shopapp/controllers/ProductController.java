@@ -92,6 +92,8 @@ import java.util.Map;
                     : objectMapper.readValue(cartJson, new TypeReference<Map<Long, Integer>>() {});
 
             List<Map<String, Object>> productsInCart = new ArrayList<>();
+            double totalValue = 0.0; // Dodaj zmienną do przechowywania sumy
+
             for (Map.Entry<Long, Integer> entry : cartItems.entrySet()) {
                 Product product = productService.getProductById(entry.getKey());
                 if (product != null) {
@@ -99,10 +101,14 @@ import java.util.Map;
                     productWithQuantity.put("product", product);
                     productWithQuantity.put("quantity", entry.getValue());
                     productsInCart.add(productWithQuantity);
+
+                    // Oblicz całkowitą wartość
+                    totalValue += product.getPrice() * entry.getValue();
                 }
             }
 
             model.addAttribute("productsInCart", productsInCart);
+            model.addAttribute("totalValue", totalValue); // Dodaj do modelu
         } catch (Exception e) {
             e.printStackTrace();
         }
