@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Lista Postów
+    </title>
+  </head>
+  <body>
+    <h1>
+      Lista Postów
+    </h1>
+    <ul>
+      @each(post in posts)
+        <li>
+          <strong>{{ post.title }}</strong>          <br />
+          {{ post.content }}<br />
+          <small>Dodano: {{ post.createdAt }}</small>
+        </li>
+      @endeach
+    </ul>
+    <a href="/posts/create">Dodaj nowy post</a>
+    <a href="/posts/save">Zapisz do pliku</a>
+  </body>
+</html>

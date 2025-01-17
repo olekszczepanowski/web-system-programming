@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Dodaj Post
+    </title>
+  </head>
+  <body>
+    <h1>
+      Dodaj Post
+    </h1>
+    <form action="/posts" method="POST">
+      {{ csrfField() }}
+        
+        <label for="title">Tytuł:</label>
+      <input type="text" id="title" name="title" required />      <br />      <br />
+
+      <label for="content">Treść:</label>
+      <textarea id="content" name="content" required></textarea>      <br />      <br />
+
+      <input type="submit" value="Dodaj Post" />
+    </form>
+  </body>
+</html>

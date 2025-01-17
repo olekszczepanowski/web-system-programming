@@ -1,0 +1,16 @@
+[
+  {
+    "id": 2,
+    "title": "Mój pierwszy post na blogu",
+    "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales justo eu ex dignissim auctor. Sed pulvinar ante odio, vitae.",
+    "createdAt": "2025-01-17T09:20:14.626+00:00",
+    "updatedAt": "2025-01-17T09:20:14.627+00:00"
+  },
+  {
+    "id": 1,
+    "title": "test",
+    "content": "test",
+    "createdAt": "2025-01-17T09:16:05.117+00:00",
+    "updatedAt": "2025-01-17T09:16:05.117+00:00"
+  }
+]
