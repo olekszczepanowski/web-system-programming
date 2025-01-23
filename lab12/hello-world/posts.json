@@ -1,5 +1,19 @@
 [
   {
+    "id": 4,
+    "title": "Moj nowy post",
+    "content": "asdasdasd",
+    "createdAt": "2025-01-17T12:13:28.774+00:00",
+    "updatedAt": "2025-01-17T12:13:28.775+00:00"
+  },
+  {
+    "id": 3,
+    "title": "Test",
+    "content": "Test",
+    "createdAt": "2025-01-17T12:12:39.898+00:00",
+    "updatedAt": "2025-01-17T12:12:39.899+00:00"
+  },
+  {
     "id": 2,
     "title": "Mój pierwszy post na blogu",
     "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales justo eu ex dignissim auctor. Sed pulvinar ante odio, vitae.",
