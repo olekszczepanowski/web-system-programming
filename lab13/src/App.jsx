@@ -12,11 +12,11 @@ const saveToFile = (data) => {
 
 const App = () => {
   const [subjects, setSubjects] = useState([
-    { name: "Analiza matematyczna", duration: "2h" },
-    { name: "Język angielski C1", duration: "1.5h" },
+    { name: "Systemy operacyjne", duration: "2h" },
+    { name: "Programowanie w JavaScript", duration: "1.5h" },
     { name: "Programowanie w Pythonie", duration: "3h" },
-    { name: "Algorytmy i struktury danych", duration: "2h" },
-    { name: "Fizyka", duration: "1h" },
+    { name: "Sztuczna inteligencja", duration: "2h" },
+    { name: "Algebra i geometria analityczna", duration: "1h" },
   ]);
   const [newSubject, setNewSubject] = useState({ name: "", duration: "" });
 
